@@ -3,48 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sam’s Cool Webpage</title>
-    <!-- Link CSS here -->
+    <title>Sam's Interactive Website</title>
+    <!-- Link to external CSS -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <h1>Welcome to My Personal Website</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Main Section -->
-    <section id="about">
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-text">
+            <h1>Welcome to My World</h1>
+            <p>Developer | Designer | Innovator</p>
+            <button class="btn" onclick="scrollToSection('projects')">View My Work</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
         <h2>About Me</h2>
-        <p>I’m Sam Derry, passionate about technology and web development!</p>
+        <p>Hi, I’m Sam Derry. Passionate about building modern and interactive web experiences that inspire.</p>
     </section>
 
-    <section id="projects">
+    <!-- Projects Section -->
+    <section id="projects" class="section">
         <h2>Projects</h2>
-        <p>Here are some of my projects:</p>
-        <ul>
-            <li><a href="https://github.com/sam/project1">Project 1</a></li>
-            <li><a href="https://github.com/sam/project2">Project 2</a></li>
-        </ul>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Project 1</h3>
+                <p>A great project showcasing XYZ features.</p>
+                <a href="https://github.com/sam/project1" class="btn">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Project 2</h3>
+                <p>Another fantastic project with ABC functionality.</p>
+                <a href="https://github.com/sam/project2" class="btn">View Project</a>
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email me at: <a href="mailto:sam@example.com">sam@example.com</a></p>
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Sam Derry</p>
+        <p>&copy; 2024 Sam Derry | <a href="#hero">Back to top</a></p>
     </footer>
 
-    <!-- Link JavaScript here -->
+    <!-- JavaScript for smooth scrolling -->
     <script src="scripts.js"></script>
 </body>
 </html>
